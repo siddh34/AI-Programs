@@ -6,7 +6,7 @@ package new8puzzle;
 // Author: Siddharth Sutar
 // Date: 16/09/2022
 // Description: Implementation of 8 puzzle game using Java
-// flaws: note that I have limited number of nodes to create this limits the program's ability to search
+// flaws: note that I have limited number of nodes to create this limits the program's ability to search or else my stack overflows 
 // A * start and manHatthan algorithm are implemented
 
 // ----------------------------------------------------------------
@@ -45,6 +45,7 @@ class MyTree{
         Node root = new Node(start);
         x = findPositionX(root);
         y = findPositionY(root);
+        // note iterations can go upto 5000 nodes
         if(iterations == 50){
             return root;
         }
